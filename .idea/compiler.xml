@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gmall_bean" />
+        <module name="gmall_interface" />
+        <module name="gmall_manage_service" />
+        <module name="gmall_manage_web" />
+        <module name="gmall_order_web" />
+        <module name="gmall_user_manage" />
+        <module name="gmall_util_common" />
+        <module name="gmall_util_service" />
+        <module name="gmall_util_web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="gmall_bean" target="1.8" />
+      <module name="gmall_interface" target="1.8" />
+      <module name="gmall_manage_service" target="1.8" />
+      <module name="gmall_manage_web" target="1.8" />
+      <module name="gmall_order_web" target="1.8" />
+      <module name="gmall_parent" target="1.8" />
+      <module name="gmall_user_manage" target="1.8" />
+      <module name="gmall_util_common" target="1.8" />
+      <module name="gmall_util_service" target="1.8" />
+      <module name="gmall_util_web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

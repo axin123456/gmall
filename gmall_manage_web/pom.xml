@@ -9,9 +9,9 @@
         <relativePath>../gmall_parent/pom.xml</relativePath>
     </parent>
 	<groupId>com.atguigu.gmall</groupId>
-	<artifactId>gmall_user_manage</artifactId>
+	<artifactId>gmall_manage_web</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>gmall_user_manage</name>
+	<name>gmall_manage_web</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -26,11 +26,10 @@
         </dependency>
         <dependency>
             <groupId>com.atguigu.gmall</groupId>
-            <artifactId>gmall_util_service</artifactId>
+            <artifactId>gmall_util_web</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
-
-    </dependencies>
+	</dependencies>
 
 	<build>
 		<plugins>
