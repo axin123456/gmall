@@ -1,9 +1,6 @@
 package com.atguigu.service;
 
-import com.atguigu.bean.BaseAttrInfo;
-import com.atguigu.bean.BaseCatalog1;
-import com.atguigu.bean.BaseCatalog2;
-import com.atguigu.bean.BaseCatalog3;
+import com.atguigu.bean.*;
 
 import java.util.List;
 
@@ -27,4 +24,22 @@ public interface ManageService {
     public BaseAttrInfo getBaseAttrInfo(String attrId);
 
 
+    //获取基本的销售属性
+    public List<BaseSaleAttr> getbaseSaleAttrList();
+
+    //保存spu信息
+    public  void saveSpuInfo(SpuInfo spuInfo);
+
+
+    //根据三级分类查询spu列表
+     public List<SpuInfo>  getSpuList(String catalog3Id);
+
+    //根据spuId查询图片列表
+     public List<SpuImage> getSpuImageList(String spuId);
+
+    //根据spuId查询销售属性
+     public List<SpuSaleAttr> getSpuSaleAttrList(String spuId);
+
+    //保存sku
+    public  void saveSkuInfo(SkuInfo skuInfo);
 }
