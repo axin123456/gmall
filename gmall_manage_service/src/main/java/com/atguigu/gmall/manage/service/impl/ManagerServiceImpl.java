@@ -24,7 +24,7 @@ import java.util.UUID;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class ManagerServiceImpl implements ManageService {
+public class ManagerServiceImpl implements ManageService{
     @Autowired
     RedisUtil redisUtil;
 
@@ -237,20 +237,31 @@ public class ManagerServiceImpl implements ManageService {
     //根据skuId查询skuInfo
     public SkuInfo getSkuInfoDB(String skuId) {
         System.err.println(Thread.currentThread() + "读取数据库!!");
-        try {
+        /*try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
 
         SkuInfo skuInfo = skuInfoMapper.selectByPrimaryKey(skuId);
         if (skuInfo == null) {
             return null;
         }
+        //图片
         SkuImage skuImage = new SkuImage();
         skuImage.setSkuId(skuInfo.getId());
         List<SkuImage> skuImageList = skuImageMapper.select(skuImage);
         skuInfo.setSkuImageList(skuImageList);
+        //销售属性
+        SkuSaleAttrValue skuSaleAttrValue = new SkuSaleAttrValue();
+        skuSaleAttrValue.setSkuId(skuId);
+        List<SkuSaleAttrValue> skuSaleAttrValueList = skuSaleAttrValueMapper.select(skuSaleAttrValue);
+        skuInfo.setSkuSaleAttrValueList(skuSaleAttrValueList);
+        //平台属性
+        SkuAttrValue skuAttrValue = new SkuAttrValue();
+        skuAttrValue.setSkuId(skuId);
+        List<SkuAttrValue> skuAttrValueList = skuAttrValueMapper.select(skuAttrValue);
+        skuInfo.setSkuAttrValueList(skuAttrValueList);
         return skuInfo;
     }
 

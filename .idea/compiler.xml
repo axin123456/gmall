@@ -10,6 +10,7 @@
         <module name="gmall_bean" />
         <module name="gmall_interface" />
         <module name="gmall_item_web" />
+        <module name="gmall_list_service" />
         <module name="gmall_manage_service" />
         <module name="gmall_manage_web" />
         <module name="gmall_order_web" />
@@ -24,6 +25,7 @@
       <module name="gmall_bean" target="1.8" />
       <module name="gmall_interface" target="1.8" />
       <module name="gmall_item_web" target="1.8" />
+      <module name="gmall_list_service" target="1.8" />
       <module name="gmall_manage_service" target="1.8" />
       <module name="gmall_manage_web" target="1.8" />
       <module name="gmall_order_web" target="1.8" />
