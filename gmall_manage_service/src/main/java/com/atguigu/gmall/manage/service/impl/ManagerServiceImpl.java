@@ -6,6 +6,7 @@ import com.atguigu.bean.*;
 import com.atguigu.gmall.manage.mapper.*;
 import com.atguigu.gmall.util.RedisUtil;
 import com.atguigu.service.ManageService;
+import org.apache.commons.lang3.StringUtils;
 import org.redisson.Redisson;
 import org.redisson.api.RLock;
 import org.redisson.api.RedissonClient;
@@ -397,5 +398,12 @@ public class ManagerServiceImpl implements ManageService{
         }
 
         return skuValueIdsMap;
+    }
+
+    @Override
+    public List<BaseAttrInfo> getAttrList(List attrValueIdList) {
+        String valueIds = StringUtils.join(attrValueIdList.toArray(), ",");
+        List<BaseAttrInfo> baseAttrInfoListByValueIds = baseAttrInfoMapper.getBaseAttrInfoListByValueIds(valueIds);
+        return baseAttrInfoListByValueIds;
     }
 }

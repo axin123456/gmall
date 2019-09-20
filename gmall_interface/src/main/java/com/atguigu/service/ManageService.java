@@ -52,4 +52,6 @@ public interface ManageService {
 
     //根据spuId查询已用的sku涉及的销售属性清单
     public Map getSkuValueIdsMap(String spuId);
+
+    public List<BaseAttrInfo> getAttrList(List attrValueIdList);
 }
