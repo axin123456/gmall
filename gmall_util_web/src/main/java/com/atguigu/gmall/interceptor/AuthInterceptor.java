@@ -63,8 +63,14 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
                 }
             } else {
                 //重定向 重新登录
-                redirct(request, response);
-                return false;
+                if (!loginRequire.autoRedirect()) {
+                    return true;
+                }else {
+                    redirct(request, response);
+                    return false;
+                }
+
+
             }
         }
         return true;
@@ -73,7 +79,7 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
     private void redirct(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String requestURL = request.getRequestURL().toString();
         String encodeURL = URLEncoder.encode(requestURL, "UTF-8");
-        response.sendRedirect(WebConst.LOGIN_URL + "? =" + encodeURL);
+        response.sendRedirect(WebConst.LOGIN_URL + "?originUrl;=" + encodeURL);
     }
 
     private Map getUserMapFromToken(String token) {

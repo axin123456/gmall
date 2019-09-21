@@ -27,7 +27,6 @@ public class PassPortController {
     @GetMapping("index")
     public String index(@RequestParam("originUrl")String originUrl , Model model) {
         model.addAttribute("originUrl",originUrl);
-
         return "index";
     }
 

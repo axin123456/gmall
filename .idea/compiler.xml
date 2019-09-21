@@ -8,6 +8,8 @@
         <outputRelativeToContentRoot value="true" />
         <module name="fastdfs-client-java" />
         <module name="gmall_bean" />
+        <module name="gmall_cart_service" />
+        <module name="gmall_cart_web" />
         <module name="gmall_interface" />
         <module name="gmall_item_web" />
         <module name="gmall_list_service" />
@@ -26,6 +28,8 @@
     <bytecodeTargetLevel>
       <module name="fastdfs-client-java" target="1.6" />
       <module name="gmall_bean" target="1.8" />
+      <module name="gmall_cart_service" target="1.8" />
+      <module name="gmall_cart_web" target="1.8" />
       <module name="gmall_interface" target="1.8" />
       <module name="gmall_item_web" target="1.8" />
       <module name="gmall_list_service" target="1.8" />

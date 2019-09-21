@@ -21,11 +21,10 @@ public class ItemController {
     @Reference
     ManageService manageService;
 
-    @Reference
-    ListService listService;
+    //@Reference
+    //ListService listService;
 
     @RequestMapping("{skuId}.html")
-    @LoginRequire
     public String getSkuInfo(@PathVariable("skuId")String skuId, HttpServletRequest request){
 
         SkuInfo skuInfo = manageService.getSkuInfo(skuId);
@@ -36,7 +35,8 @@ public class ItemController {
         String valuesSkuJson = JSON.toJSONString(skuValueIdsMap);
         request.setAttribute("valuesSkuJson",valuesSkuJson);
 
-        listService.incrHotScore(skuId);
+        //listService.incrHotScore(skuId);
+        request.getAttribute("userId");
         return "item";
 
     }
