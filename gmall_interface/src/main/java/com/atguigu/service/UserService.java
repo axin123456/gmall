@@ -1,7 +1,7 @@
 package com.atguigu.service;
 
 
-
+import com.atguigu.bean.UserAddress;
 import com.atguigu.bean.UserInfo;
 
 import java.util.List;
@@ -13,7 +13,7 @@ public interface UserService {
 
     void updateUser(UserInfo userInfo);
 
-    void updateUserByName(String name,UserInfo userInfo);
+    void updateUserByName(String name, UserInfo userInfo);
 
     void delUser(UserInfo userInfo);
 
@@ -21,5 +21,7 @@ public interface UserService {
 
     UserInfo login(UserInfo userInfo);
 
-   Boolean verify(String userId);
+    Boolean verify(String userId);
+
+    public List<UserAddress> getUserAddressList(String userId);
 }

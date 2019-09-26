@@ -25,7 +25,9 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        //检查token
         String token = null;
+        //1. newToken
         token = request.getParameter("newToken");
         if (token != null) {
             //把token放到cookie中
