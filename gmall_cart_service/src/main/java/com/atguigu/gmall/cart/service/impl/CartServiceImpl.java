@@ -70,6 +70,9 @@ public class CartServiceImpl implements CartService {
         String cartinfoJson = JSON.toJSONString(cartInfoExists);
         jedis.hset(cartKey, skuId, cartinfoJson);
         jedis.close();
+
+
+
         loadCartCache(userId);
         return cartInfoExists;
     }
