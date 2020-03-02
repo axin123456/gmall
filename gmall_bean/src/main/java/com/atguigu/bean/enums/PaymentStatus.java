@@ -7,6 +7,10 @@ public enum PaymentStatus {
     PAY_REFUND("支付退款成功"),
     ClOSED("已关闭");
 
+
+
+
+
     private String name ;
 
     PaymentStatus(String name) {
